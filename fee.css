@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background: url("carousel.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: slideRight 2s ease forwards;
+}
+
+.navbar .logo {
+    font-size: 2.1rem;
+    font-weight: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    animation: slideRight 2s ease forwards;
+}
+
+.navbar .logo span {
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgb(27, 7, 3);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.content h1 {
+    font-size: 50px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    animation: slideRight 2s ease forwards;
+}
+
+.content p {
+    font-size: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation: slideRight 2s ease forwards;
+}
+
+.content button {
+    background: white;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 38px;
+    animation: slideRight 2s ease forwards;
+}
+
+.content button:hover {
+    background: rgb(236, 182, 5);
+}
+
+.content {
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-top: 30%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+
+/* @media screen and (max-width: 768px) {
+            .navbar .menu-links {
+                position: fixed;
+                left: 0;
+                top: 0;
+                flex-direction: column;
+                width: 260px;
+                height: 100vh;
+                background: #fff;
+                padding: 70px 40px 0;
+            }
+        } */
+
+@media only screen and (max-width: 768px) {
+    .navbar .menulinks {
+        position: fixed;
+        left: -20px;
+        top: 0;
+        flex-direction: column;
+        width: 270px;
+        height: 100vh;
+        background: #fff;
+        padding: 70px 40px 0;
+    }
+    .navbar .menulinks a {
+        color: black;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
